@@ -16,6 +16,14 @@ def test_enter_garage_duplicate():
     with pytest.raises(ValueError):
         enter_garage(garage, "A", 2)
 
+def test_enter_garage_invaild_time():
+    garage = {
+        "capacity": 2,
+        "cars":{"A", 2}
+    }
+    with pytest.raises(TypeError):
+        enter_garage(garage, "A", 2)
+
 # --------- For get_avaiable_spots func ---------
 def test_get_available_spots_empty():
     garage = {
