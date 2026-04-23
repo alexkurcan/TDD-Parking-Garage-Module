@@ -32,7 +32,7 @@ def test_exit_garage_success():
         "cars":{"A": 1}
     }
     exit_garage(garage, "A")
-    assert "A" not in garage["cars"]
+    assert "A" not in garage["cars"] == True
 
 def test_exit_garage_not_found():
     garage = {
