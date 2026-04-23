@@ -84,3 +84,7 @@ def test_calculate_fee(hours, rate, expected):
 def test_calculate_fee_negative():
     with pytest.raises(ValueError):
         calculate_fee(-1, 2)
+
+def test_calculate_fee_invaild():
+    with pytest.raises(TypeError):
+        calculatefee("2", 3)
