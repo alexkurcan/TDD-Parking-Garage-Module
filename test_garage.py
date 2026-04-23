@@ -73,7 +73,7 @@ def test_enter_garage_full():
         enter_garage(garage, "B", 2)
 
 # --------- For calculate_fee func ---------
-@pytest.mark.parameterize("hours, rate, expected", [
+@pytest.mark.parametrize("hours, rate, expected", [
     (1, 2, 2.00),
     (2.5, 4, 10.00),
     (0, 5, 0.00),
