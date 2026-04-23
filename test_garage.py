@@ -15,7 +15,7 @@ def test_get_available_spots_partial():
     }
     assert get_available_spots(garage) == 9
 
-def test_spots_are_full(garage):
+def test_spots_are_full():
     garage = {
         "capacity": 10,
         "cars":{"A":1}
