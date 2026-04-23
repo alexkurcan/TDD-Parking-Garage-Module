@@ -13,6 +13,7 @@ def enter_garage(garage, car_id, entry_hour):
 def exit_garage(garage, car_id):
     if car_id not in garage["cars"]:
         raise KeyError("car could not be found")
+    del garage["cars"][car_id]
 
 def get_available_spots(garage):
     spots = garage["capacity"] - len(garage["cars"])
