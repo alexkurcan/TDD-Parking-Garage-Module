@@ -19,4 +19,5 @@ def get_available_spots(garage):
     return max(0, spots)
 
 def calculate_fee(hours, rate):
-    pass
+    if not isinstance(hours, (int, float)) or not isinstance(rate, (int, float)):
+        raise TypeError("hours and rate have to be a number")
