@@ -21,7 +21,7 @@ def test_enter_garage_invaild_time():
         "capacity": 2,
         "cars":{}
     }
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         enter_garage(garage, "A", 2)
 
 # --------- For get_avaiable_spots func ---------
