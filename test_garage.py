@@ -6,11 +6,11 @@ def test_get_available_spots_basic():
         "capacity": 10,
         "cars":{}
     }
-    assert get_available_spots(garage) == 15
+    assert get_available_spots(garage) == 10
 
 def test_get_available_spots_partial():
     garage = {
         "capacity": 10,
         "cars":{"A": 1}
     }
-    assert get_available_spots(garage) == 14
+    assert get_available_spots(garage) == 9
