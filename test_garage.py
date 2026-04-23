@@ -31,6 +31,7 @@ def test_exit_garage_success():
         "capacity": 2,
         "cars":{"A": 1}
     }
+    exit_garage(garage, "A")
     assert "A" not in garage["cars"]
 
 # --------- For get_avaiable_spots func ---------
