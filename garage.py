@@ -5,6 +5,7 @@ def enter_garage(garage, car_id, entry_hour):
         raise ValueError("that car is already in the garage")
     if len(garage["cars"]) >= garage["capacity"]:
         raise ValueError("garage is full")
+    garage["cars"][car_id] = entry_hour
 
 def exit_garage(garage, car_id):
     pass
