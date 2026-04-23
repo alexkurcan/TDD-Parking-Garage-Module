@@ -19,7 +19,7 @@ def test_enter_garage_duplicate():
 def test_enter_garage_invaild_time():
     garage = {
         "capacity": 2,
-        "cars":{"A", 2}
+        "cars":{}
     }
     with pytest.raises(TypeError):
         enter_garage(garage, "A", 2)
