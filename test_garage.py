@@ -1,6 +1,7 @@
 import pytest
-from garage import get_available_spots, enter_garage
+from garage import get_available_spots, enter_garage, exit_garage
 
+# --------- For enter_garage func ---------
 def test_enter_garage_sucess():
     garage = {
         "capacity": 2,
@@ -23,6 +24,14 @@ def test_enter_garage_invaild_time():
     }
     with pytest.raises(TypeError):
         enter_garage(garage, "A", "2")
+
+# --------- For exit_garage func ---------
+def test_exit_garage_success():
+    garage = {
+        "capacity": 2,
+        "cars":{"A": 1}
+    }
+    assert "A" not in garage["cars"]
 
 # --------- For get_avaiable_spots func ---------
 def test_get_available_spots_empty():
