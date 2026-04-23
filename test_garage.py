@@ -87,4 +87,4 @@ def test_calculate_fee_negative():
 
 def test_calculate_fee_invaild():
     with pytest.raises(TypeError):
-        calculatefee("2", 3)
+        calculate_fee("2", 3)
