@@ -1,5 +1,5 @@
 import pytest
-from garage import get_available_spots, enter_garage, exit_garage
+from garage import get_available_spots, enter_garage, exit_garage, calculate_fee
 
 # --------- For enter_garage func ---------
 def test_enter_garage_sucess():
@@ -71,3 +71,12 @@ def test_enter_garage_full():
     }
     with pytest.raises(ValueError):
         enter_garage(garage, "B", 2)
+
+# --------- For calculate_fee func ---------
+@pytest.mark.parameterize("hours, rate, expected", [
+    (1, 2, 2.00),
+    (2.5, 4, 10.00),
+    (0, 5, 0.00),
+])
+def test_calculate_fee(hours, rate, expected):
+    assert calculate_fee(hours, rate) == expected
