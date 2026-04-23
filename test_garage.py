@@ -39,9 +39,9 @@ def test_exit_garage_not_found():
         "capacity": 2,
         "cars":{}
     }
-    with pytest.rasies(KeyError):
+    with pytest.raises(KeyError):
         exit_garage(garage, "A")
-        
+
 # --------- For get_avaiable_spots func ---------
 def test_get_available_spots_empty():
     garage = {
