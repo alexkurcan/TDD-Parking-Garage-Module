@@ -17,7 +17,7 @@ def test_get_available_spots_partial():
 
 def test_get_available_spots_full():
     garage = {
-        "capacity": 10,
+        "capacity": 0,
         "cars": {"A": 1}
     }
     assert get_available_spots(garage) == 0
