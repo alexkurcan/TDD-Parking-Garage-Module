@@ -80,3 +80,7 @@ def test_enter_garage_full():
 ])
 def test_calculate_fee(hours, rate, expected):
     assert calculate_fee(hours, rate) == expected
+
+def test_calculate_fee_negative():
+    with pytest.raises(ValueError):
+        calculate_fee(-1, 2)
