@@ -1,6 +1,14 @@
 import pytest
-from garage import get_available_spots
+from garage import get_available_spots, enter_garage
 
+def test_enter_garage_sucess():
+    garage = {
+        "capacity": 10,
+        "cars":{"A": 1}
+    }
+    assert "A" in garage["cars"]
+
+# --------- For get_avaiable_spots func ---------
 def test_get_available_spots_empty():
     garage = {
         "capacity": 10,
