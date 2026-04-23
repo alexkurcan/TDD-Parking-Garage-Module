@@ -37,3 +37,11 @@ def test_get_available_spots_full():
         "cars": {"A": 1}
     }
     assert get_available_spots(garage) == 0
+
+def test_enter_garage_full():
+    garage = {
+        "capacity":1,
+        "cars":{"A":1}
+    }
+    with pytest.raises(ValueError):
+        enter_garage(garage, "B", 2)
