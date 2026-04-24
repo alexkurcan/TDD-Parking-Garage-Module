@@ -29,10 +29,10 @@ def test_enter_garage_invaild_time():
 def test_exit_garage_success():
     garage = {
         "capacity": 2,
-        "cars":{"A": 1}
+        "cars": {"A": 1}
     }
     exit_garage(garage, "A")
-    assert "A" == garage["cars"]
+    assert "A" not in garage["cars"]
 
 def test_exit_garage_not_found():
     garage = {
